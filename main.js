@@ -50,17 +50,6 @@ while(listOpen){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 // Creating an item
 function createItem(str){
     console.log("\n~ Creating a new to-do item ~\nWhat is this to-do item called?")
