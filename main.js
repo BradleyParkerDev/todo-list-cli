@@ -30,19 +30,20 @@ while(listOpen){
 
     }
     else{
+        console.log("\n==============================================\n");
         console.log("You have " + toDoItem.length + " to-do item(s).\n");
-
+        for(let i = 0; i < toDoItem.length; i++){
+            console.log((i+1)+ "." + toDoStatus[i]+ " " + toDoItem[i])
+    
+        }
+        console.log("==============================================\n");
     }
     console.log("~ Select an action ~");
-
-
-    for(let i = 0; i < toDoItem.length; i++){
-        console.log((i+1)+ "." + toDoStatus[i]+ " " + toDoItem[i])
-
-    }
-    console.log("==============================================\n");
     console.log("[1] Create a to-do item");
     console.log("[2] Complete a to-do item");
+
+
+
     let action = prompt("> ");
     actionSelection(Number(action));
 
