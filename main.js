@@ -10,6 +10,9 @@ let item1 = "Go to the dentist";
 let item2 = "Buy groceries";
 let listOpen = true;
 
+
+
+
 // Initial welcome
 console.log("\nWelcome to the To-Do List Manager Application!\n");
 console.log("==============================================\n");
@@ -47,7 +50,18 @@ while(listOpen){
 }
 
 
-// Creates a to-do item
+
+
+
+
+
+
+
+
+
+
+
+// Creating an item
 function createItem(str){
     console.log("\n~ Creating a new to-do item ~\nWhat is this to-do item called?")
     let item = prompt("> ");
@@ -56,27 +70,35 @@ function createItem(str){
 
 }
 
-// Completes a to-do item
+
+
+// Completing an item
 function completeItem(){
+ 
     if(toDoStatus[0]===  undefined && toDoItem[0] === undefined){
         console.log("Your list is empty.")
     }else{
-        console.log("\n~ Completing a to-do item ~\nWhich to-do item would you like to complete?")
+        console.log("\n~ Completing a new to-do item ~\nWhich to-do item would you like to complete?")
         let item = prompt("> ");
         let i = item - 1;
         return toDoStatus[i] = "[complete]";
     }
 }
 
-// Action selection - (1) for create (2) for complete
+
+
+// Action selection
 function actionSelection(num){
     let n = num;
     if(n == 1){
+
         createItem();
     }
     else if(n == 2){    
         completeItem();
     }
+
+
 }
 
 
