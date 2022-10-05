@@ -4,7 +4,7 @@ const prompt = require("prompt-sync")({sigint:true});
 const toDoItem = [];
 const toDoStatus = [];
 
-// Boolean variable for while loop
+// Boolean variable for while loop - it keeps list open
 let listOpen = true;
 
 // Initial welcome
@@ -17,7 +17,7 @@ console.log("[2] Complete a to-do item");
 let action = prompt("> ");
 actionSelection(Number(action));
 
-// looped user input
+// Looped user input
 while(listOpen){
     if(toDoStatus[0]===  undefined && toDoItem[0] === undefined){
         console.log("Your to-do list is empty.\n");
@@ -36,7 +36,7 @@ while(listOpen){
     actionSelection(Number(action));
 }
 
-// Creating an item
+// Creates a to-do list item
 function createItem(str){
     console.log("\n~ Creating a new to-do item ~\nWhat is this to-do item called?")
     let item = prompt("> ");
@@ -45,7 +45,7 @@ function createItem(str){
 
 }
 
-// Completing an item
+// Completes a to-do list item
 function completeItem(){
     if(toDoStatus[0]===  undefined && toDoItem[0] === undefined){
         console.log("Your list is empty.")
@@ -57,7 +57,7 @@ function completeItem(){
     }
 }
 
-// Action selection
+// Action selection 
 function actionSelection(num){
     let n = num;
     if(n == 1){
