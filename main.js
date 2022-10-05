@@ -68,9 +68,3 @@ function actionSelection(num){
         completeItem();
     }
 }
-
-
-
-
-
-
